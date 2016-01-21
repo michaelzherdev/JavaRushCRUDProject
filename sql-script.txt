@@ -1,0 +1,25 @@
+DROP DATABASE IF EXISTS test;
+
+CREATE DATABASE test;
+
+USE test;
+
+CREATE TABLE IF NOT EXISTS `test`.`users` (
+  `id` INT(8) NOT NULL  AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `age` INT NOT NULL,
+  `isAdmin` BIT NOT NULL,
+  `dateCreated` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '',
+  PRIMARY KEY (`id`));
+
+
+INSERT INTO users (name, age, isAdmin) 
+VALUES ('Mikhail', 28, 1),
+('John', 30, 0),
+('Mark', 23, 0), ('Anton', 25, 0),
+('Egor', 3, 0),
+('Dan', 4, 1), 
+('Natan', 26, 1), ('Polina', 18, 0),
+('Kostya', 29, 1),
+ ('Yura', 52, 0), 
+('Yulya', 23, 1), ('Paul', 71, 1);
